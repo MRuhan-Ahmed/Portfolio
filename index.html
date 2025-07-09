@@ -313,15 +313,6 @@
                 </div>
             </div>
 
-            <div id="galleryModal" class="modal">
-                <span class="close" onclick="closeGallery()">&times;</span>
-                <div class="modal-content">
-                    <img src="images/Project-screenshots/Fabric/g10-dashboard.png" alt="Screenshot 1">
-                    <img src="images/Project-screenshots/Fabric/booking-number-nulls-duplicates-solution.png" alt="Screenshot 2">
-                    <!-- Add more images as needed -->
-                </div>
-            </div>
-
             <div id="powerbi-gallery" class="modal">
                 <span class="close" onclick="closeGallery('powerbi')">&times;</span>
                 <div class="modal-content">
@@ -367,13 +358,6 @@
                     </div>
 
                 </div>
-            </div>
-
-
-            <!-- Expanded full-screen view -->
-            <div id="fullscreenModal" class="modal fullscreen">
-                <span class="close" onclick="closeFullscreen()">&times;</span>
-                <img id="fullscreenImg" class="fullscreen-img" src="" alt="Full image">
             </div>
 
             <iframe title="G10_Q1_Dashboard" width="100%" height=530
@@ -443,26 +427,30 @@
         </section>
     </main>
 
+    <!-- gallery-opening/closing & expandImage script -->
     <script>
-    function openGallery(type) {
+      function openGallery(type) {
         document.getElementById(type + '-gallery').style.display = "block";
-    }
-
-    function closeGallery(type) {
+      }
+      function closeGallery(type) {
         document.getElementById(type + '-gallery').style.display = "none";
-    }
-
-    function expandImage(img) {
+      }
+      function expandImage(img) {
         const modal = document.getElementById('fullscreenModal');
         const fullImg = document.getElementById('fullscreenImg');
         fullImg.src = img.src;
         modal.style.display = "flex";
-    }
-
-    function closeFullscreen() {
+      }
+      function closeFullscreen() {
         document.getElementById('fullscreenModal').style.display = "none";
-    }
+      }
     </script>
+
+    <!-- Fullscreen Image Modal -->
+    <div id="fullscreenModal" class="modal fullscreen">
+      <span class="close" onclick="closeFullscreen()">&times;</span>
+      <img id="fullscreenImg" class="fullscreen-img" src="" alt="Full image">
+    </div>
 
 </body>
 </html>
