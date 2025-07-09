@@ -205,6 +205,127 @@ nav .right a span {
   filter: brightness(0.9);
 }
 
+.project-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.project-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    font-weight: 600;
+    border: 2px solid var(--link-color);
+    border-radius: 5px;
+    background-color: transparent;
+    color: var(--text-color);
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+}
+
+.project-btn:hover {
+    background-color: var(--link-color);
+    color: white;
+    border-color: var(--link-color);
+}
+
+/* Gallery modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    background-color: rgba(0,0,0,0.9);
+    padding: 60px 20px;
+}
+
+.modal-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.modal-content img {
+    max-width: 300px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.modal-content img:hover {
+    transform: scale(1.05);
+}
+
+.close {
+    position: absolute;
+    top: 30px;
+    right: 50px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.screenshot-wrapper {
+    position: relative;
+    display: inline-block;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.screenshot-wrapper img {
+    display: block;
+    max-width: 300px;
+    border-radius: 6px;
+    transition: transform 0.3s ease;
+}
+
+.screenshot-wrapper .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.45);
+    color: #fff;
+    font-size: 32px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.screenshot-wrapper:hover .overlay {
+    opacity: 1;
+}
+
+/* Fullscreen image */
+.modal.fullscreen {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0,0,0,0.95);
+}
+
+.fullscreen-img {
+    max-width: 90%;
+    max-height: 90vh;
+    border-radius: 8px;
+}
+
 .iframe-wrapper {
   display: flex;
   justify-content: center;
