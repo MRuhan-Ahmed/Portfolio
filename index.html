@@ -411,15 +411,17 @@
                     If you're looking for a data analyst for your next project, let's get in touch!
                 </div>
 
-                <form>
+                <form action="https://api.web3forms.com/submit" method="POST">
+                    <input type="hidden" name="access_key" value="c2a13762-1c6d-44c5-a4dc-7858dcefa585">
+
                     <label for="name">Name</label>
-                    <input type="text" id="name">
+                    <input type="text" name="name" placeholder="Your Name" required>
 
                     <label for="email">Email</label>
-                    <input type="email" id="email">
+                    <input type="email" name="email" placeholder="Your Email" required>
 
                     <label for="message">Message</label>
-                    <textarea id="message" cols="30" rows="10"></textarea>
+                    <textarea name="message" cols="30" rows="10" placeholder="Hi, Ruhan..." required></textarea>
 
                     <button type="submit">Send Message</button>
                 </form>
